@@ -11,7 +11,7 @@ https://sripriyesha.github.io/ask-nithyananda/
 
 ⚠️ Run all commands below in PowerShell as administrator.
 
-To test the site locally:
+Prerequisites:
 
 1. Install Chocolatey  
    https://chocolatey.org/install#individual
