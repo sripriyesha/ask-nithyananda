@@ -1,6 +1,6 @@
 # ask-nithyananda
 
-Link to find all my Q&A from Ask Nithyananda
+Link to find all my Q&A from Ask Nithyananda  
 https://sripriyesha.github.io/ask-nithyananda/
 
 ---
