@@ -3,14 +3,47 @@ layout: default
 title: Ask Nithyananda Q&A
 ---
 
-{% assign sorted_qa = site.qa | sort: 'date' | reverse %}
-{% for qa in sorted_qa %}
-<article
-  class="qa-item"
-  id="{{ qa.date | date: '%Y-%m-%d' }}-{{ qa.title | slugify }}"
->
-  <h2 class="question">{{ qa.title }}</h2>
-  <div class="answer">{{ qa.content }}</div>
-  <p class="date">Date: {{ qa.date | date: "%B %Y" }}</p>
-</article>
-{% endfor %}
+  {% assign sorted_qa = site.qa | sort: 'date' | reverse %}
+  {% for qa in sorted_qa %}
+  <article
+    class="qa-item"
+    id="{{ qa.date | date: '%Y-%m-%d' }}-{{ qa.title | slugify }}"
+  >
+    <div class="question-header">
+      <button class="link-button" onclick="copyLink('{{ qa.date | date: '%Y-%m-%d' }}-{{ qa.title | slugify }}')" title="Copy link to this answer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+          <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+        </svg>
+      </button>
+      <h2 class="question">{{ qa.title }}</h2>
+      <button class="copy-button" onclick="copyContent(this, '{{ qa.title }}', '{{ qa.content | strip_html | strip_newlines | replace: '"', '\"' }}')" title="Copy question and answer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+        </svg>
+      </button>
+    </div>
+    <div class="answer">{{ qa.content }}</div>
+    <p class="date">Date: {{ qa.date | date: "%B %Y" }}</p>
+  </article>
+  {% endfor %}
+
+<script>
+function copyLink(id) {
+  const url = window.location.href.split('#')[0] + '#' + id;
+  navigator.clipboard.writeText(url).then(() => {
+    const button = document.querySelector(`[onclick="copyLink('${id}')"]`);
+    button.classList.add('copied');
+    setTimeout(() => button.classList.remove('copied'), 1000);
+  });
+}
+
+function copyContent(button, title, content) {
+  const text = `Q: ${title}\n\nA: ${content}`;
+  navigator.clipboard.writeText(text).then(() => {
+    button.classList.add('copied');
+    setTimeout(() => button.classList.remove('copied'), 1000);
+  });
+}
+</script>
