@@ -1,0 +1,19 @@
+title: My Ask Nithyananda Q&A Database
+description: A collection of questions and answers
+url: "https://sripriyesha.github.io"
+baseurl: "/ask-nithyananda/"
+
+# Collections
+collections:
+  qa:
+    output: true
+    permalink: /:collection/:title
+
+# Build settings
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - .gitignore
+  - .DS_Store
+  - LICENSE
