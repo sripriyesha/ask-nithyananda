@@ -11,9 +11,10 @@ However, enlightenment transcends just working on the physical form. It requires
 
 In summary:
 
-Working on the body through authentic yoga is an essential foundational path.
-It cleanses and balances energy channels to facilitate awakening.
-But true enlightenment unfolds when this physical discipline is combined with breath mastery, meditation, sacred sound (japa), and divine connection.
+- Working on the body through authentic yoga is an essential foundational path.
+- It cleanses and balances energy channels to facilitate awakening.
+- But true enlightenment unfolds when this physical discipline is combined with breath mastery, meditation, sacred sound (japa), and divine connection.
+
 Yoga is not just about health; it is the science of radiating enlightenment itself. The path through the body is accessible but must be integrated with higher yogic sciences for complete liberation.
 
 If you desire guidance on specific yogic practices to begin this sacred journey effectively, I am here to guide you.
