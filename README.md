@@ -16,14 +16,7 @@ Prerequisites:
 1. Install Chocolatey  
    https://chocolatey.org/install#individual
 
-2. Install PHP
-
-```bash
-# Install PHP with Chocolatey
-choco install php
-```
-
-3. Install Ruby
+2. Install Ruby
 
 ```bash
 # Install Ruby with Chocolatey
